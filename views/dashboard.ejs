@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Queue Dashboard</title>
+</head>
+<body>
+  <h1>Queue Dashboard</h1>
+  <div>
+    <h2>Email Queue Status</h2>
+    <ul>
+        <% for (let key in emailQueueStatus) { %>
+            <li><strong><%= key %>:</strong> <%= emailQueueStatus[key] %></li>
+        <% } %>
+    </ul>
+  </div>
+
+  <div>
+      <h2>File Processing Queue Status</h2>
+      <ul>
+          <% for (let key in fileProcessingQueueStatus) { %>
+              <li><strong><%= key %>:</strong> <%= fileProcessingQueueStatus[key] %></li>
+          <% } %>
+      </ul>
+  </div>
+</body>
+</html>
